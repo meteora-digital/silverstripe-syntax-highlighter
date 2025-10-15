@@ -11,20 +11,20 @@
             "patterns": []
         },
         {
-            "name": "variable.other.silverstripe.braced",
+            "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe.braced",
             "begin": "(\\{)(\\$)",
             "beginCaptures": {
                 "1": {
-                    "name": "punctuation.definition.variable.begin.silverstripe"
+                    "name": "punctuation.definition.tag.begin.html.silverstripe variable.begin.silverstripe"
                 },
                 "2": {
-                    "name": "variable.other.silverstripe"
+                    "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe"
                 }
             },
             "end": "(\\})",
             "endCaptures": {
                 "1": {
-                    "name": "punctuation.definition.variable.end.silverstripe"
+                    "name": "punctuation.definition.tag.end.html.silverstripe variable.end.silverstripe"
                 }
             },
             "patterns": [
@@ -33,13 +33,13 @@
                     "begin": "\"",
                     "beginCaptures": {
                         "0": {
-                            "name": "string.quoted.double.silverstripe punctuation.definition.string.begin.silverstripe"
+                            "name": "punctuation.definition.string.begin.html.silverstripe"
                         }
                     },
                     "end": "\"",
                     "endCaptures": {
                         "0": {
-                            "name": "string.quoted.double.silverstripe punctuation.definition.string.end.silverstripe"
+                            "name": "punctuation.definition.string.end.html.silverstripe"
                         }
                     },
                     "patterns": [
@@ -54,13 +54,13 @@
                     "begin": "'",
                     "beginCaptures": {
                         "0": {
-                            "name": "string.quoted.single.silverstripe punctuation.definition.string.begin.silverstripe"
+                            "name": "punctuation.definition.string.begin.html.silverstripe"
                         }
                     },
                     "end": "'",
                     "endCaptures": {
                         "0": {
-                            "name": "string.quoted.single.silverstripe punctuation.definition.string.end.silverstripe"
+                            "name": "punctuation.definition.string.end.html.silverstripe"
                         }
                     },
                     "patterns": [
@@ -71,11 +71,11 @@
                     ]
                 },
                 {
-                    "name": "support.function.silverstripe",
+                    "name": "punctuation.separator.key-value.html.silverstripe",
                     "match": "(\\.[a-zA-Z_][\\w]*)(?=\\()",
                     "captures": {
                         "1": {
-                            "name": "support.function.silverstripe"
+                            "name": "punctuation.separator.key-value.html.silverstripe"
                         }
                     }
                 },
@@ -87,19 +87,21 @@
                         {
                             "name": "meta.function-call.argument-list.silverstripe",
                             "patterns": [
-                                { "include": "#variablePatterns" },
+                                {
+                                    "include": "#variablePatterns"
+                                },
                                 {
                                     "name": "string.quoted.double.silverstripe",
                                     "begin": "\"",
                                     "beginCaptures": {
                                         "0": {
-                                            "name": "string.quoted.double.silverstripe punctuation.definition.string.begin.silverstripe"
+                                            "name": "punctuation.definition.string.begin.html.silverstripe"
                                         }
                                     },
                                     "end": "\"",
                                     "endCaptures": {
                                         "0": {
-                                            "name": "string.quoted.double.silverstripe punctuation.definition.string.end.silverstripe"
+                                            "name": "punctuation.definition.string.end.html.silverstripe"
                                         }
                                     },
                                     "patterns": [
@@ -114,13 +116,13 @@
                                     "begin": "'",
                                     "beginCaptures": {
                                         "0": {
-                                            "name": "string.quoted.single.silverstripe punctuation.definition.string.begin.silverstripe"
+                                            "name": "string.quoted.single.silverstripe punctuation.definition.string.begin.html.silverstripe"
                                         }
                                     },
                                     "end": "'",
                                     "endCaptures": {
                                         "0": {
-                                            "name": "string.quoted.single.silverstripe punctuation.definition.string.end.silverstripe"
+                                            "name": "string.quoted.single.silverstripe punctuation.definition.string.end.html.silverstripe"
                                         }
                                     },
                                     "patterns": [
@@ -147,27 +149,27 @@
                     ]
                 },
                 {
-                    "name": "support.function.silverstripe",
+                    "name": "punctuation.separator.key-value.html.silverstripe",
                     "match": "\\.[a-zA-Z_][\\w]*"
                 }
             ]
         },
         {
-            "name": "variable.other.silverstripe.complex",
+            "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe.complex",
             "begin": "(\\$[a-zA-Z_][\\w]*)",
             "beginCaptures": {
                 "1": {
-                    "name": "variable.other.silverstripe"
+                    "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe"
                 }
             },
             "end": "(?=\\s|$|[^\\w\\.$\\(\\)']|\\))",
             "patterns": [
                 {
-                    "name": "support.function.silverstripe",
+                    "name": "punctuation.separator.key-value.html.silverstripe",
                     "match": "(\\.[a-zA-Z_][\\w]*)(?=\\()",
                     "captures": {
                         "1": {
-                            "name": "support.function.silverstripe"
+                            "name": "punctuation.separator.key-value.html.silverstripe"
                         }
                     }
                 },
@@ -179,7 +181,9 @@
                         {
                             "name": "meta.function-call.argument-list.silverstripe",
                             "patterns": [
-                                { "include": "#variablePatterns" },
+                                {
+                                    "include": "#variablePatterns"
+                                },
                                 {
                                     "name": "string.quoted.double.silverstripe",
                                     "begin": "\"",
@@ -207,47 +211,53 @@
                     ]
                 },
                 {
-                    "name": "support.function.silverstripe",
+                    "name": "punctuation.separator.key-value.html.silverstripe",
                     "match": "\\.[a-zA-Z_][\\w]*"
                 }
             ]
         },
         {
-            "name": "variable.other.silverstripe.simple",
+            "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe.simple",
             "match": "\\$[a-zA-Z_][\\w]*",
             "captures": {
                 "0": {
-                    "name": "variable.other.silverstripe"
+                    "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe"
                 }
             }
         },
         {
-            "name": "meta.embedded.block.silverstripe",
+            "name": "block.silverstripe",
             "begin": "<%(?!-)",
             "beginCaptures": {
                 "0": {
-                    "name": "punctuation.section.embedded.begin.silverstripe"
+                    "name": "punctuation.separator.key-value.html.silverstripe"
                 }
             },
             "end": "(?<!-)%>",
             "endCaptures": {
                 "0": {
-                    "name": "punctuation.section.embedded.end.silverstripe"
+                    "name": "punctuation.separator.key-value.html.silverstripe"
                 }
             },
             "patterns": [
+                {
+                    "name": "comment.block.silverstripe",
+                    "begin": "<%--",
+                    "end": "--%>",
+                    "patterns": []
+                },
                 {
                     "name": "string.quoted.double.silverstripe",
                     "begin": "\"",
                     "beginCaptures": {
                         "0": {
-                            "name": "string.quoted.double.silverstripe punctuation.definition.string.begin.silverstripe"
+                            "name": "punctuation.definition.string.begin.html.silverstripe"
                         }
                     },
                     "end": "\"",
                     "endCaptures": {
                         "0": {
-                            "name": "string.quoted.double.silverstripe punctuation.definition.string.end.silverstripe"
+                            "name": "punctuation.definition.string.end.html.silverstripe"
                         }
                     },
                     "patterns": [
@@ -262,13 +272,13 @@
                     "begin": "'",
                     "beginCaptures": {
                         "0": {
-                            "name": "string.quoted.single.silverstripe punctuation.definition.string.begin.silverstripe"
+                            "name": "string.quoted.single.silverstripe punctuation.definition.string.begin.html.silverstripe"
                         }
                     },
                     "end": "'",
                     "endCaptures": {
                         "0": {
-                            "name": "string.quoted.single.silverstripe punctuation.definition.string.end.silverstripe"
+                            "name": "string.quoted.single.silverstripe punctuation.definition.string.end.html.silverstripe"
                         }
                     },
                     "patterns": [
@@ -284,24 +294,38 @@
     "repository": {
         "variablePatterns": {
             "patterns": [
-                { "include": "#bracedVariable" },
-                { "include": "#complexVariable" },
-                { "include": "#simpleVariable" }
+                {
+                    "include": "#bracedVariable"
+                },
+                {
+                    "include": "#complexVariable"
+                },
+                {
+                    "include": "#simpleVariable"
+                }
             ]
         },
         "bracedVariable": {
-            "name": "variable.other.silverstripe.braced",
+            "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe.braced",
             "begin": "(\\{)(\\$)",
             "beginCaptures": {
-                "1": { "name": "punctuation.definition.variable.begin.silverstripe" },
-                "2": { "name": "variable.other.silverstripe" }
+                "1": {
+                    "name": "punctuation.definition.tag.begin.html.silverstripe variable.begin.silverstripe"
+                },
+                "2": {
+                    "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe"
+                }
             },
             "end": "(\\})",
             "endCaptures": {
-                "1": { "name": "punctuation.definition.variable.end.silverstripe" }
+                "1": {
+                    "name": "punctuation.definition.tag.end.html.silverstripe variable.end.silverstripe"
+                }
             },
             "patterns": [
-                { "include": "#variablePatterns" },
+                {
+                    "include": "#variablePatterns"
+                },
                 {
                     "name": "meta.function-call.arguments.silverstripe",
                     "begin": "\\(",
@@ -310,19 +334,21 @@
                         {
                             "name": "meta.function-call.argument-list.silverstripe",
                             "patterns": [
-                                { "include": "#variablePatterns" },
+                                {
+                                    "include": "#variablePatterns"
+                                },
                                 {
                                     "name": "string.quoted.double.silverstripe",
                                     "begin": "\"",
                                     "beginCaptures": {
                                         "0": {
-                                            "name": "string.quoted.double.silverstripe punctuation.definition.string.begin.silverstripe"
+                                            "name": "punctuation.definition.string.begin.html.silverstripe"
                                         }
                                     },
                                     "end": "\"",
                                     "endCaptures": {
                                         "0": {
-                                            "name": "string.quoted.double.silverstripe punctuation.definition.string.end.silverstripe"
+                                            "name": "punctuation.definition.string.end.html.silverstripe"
                                         }
                                     },
                                     "patterns": [
@@ -337,13 +363,13 @@
                                     "begin": "'",
                                     "beginCaptures": {
                                         "0": {
-                                            "name": "string.quoted.single.silverstripe punctuation.definition.string.begin.silverstripe"
+                                            "name": "string.quoted.single.silverstripe punctuation.definition.string.begin.html.silverstripe"
                                         }
                                     },
                                     "end": "'",
                                     "endCaptures": {
                                         "0": {
-                                            "name": "string.quoted.single.silverstripe punctuation.definition.string.end.silverstripe"
+                                            "name": "string.quoted.single.silverstripe punctuation.definition.string.end.html.silverstripe"
                                         }
                                     },
                                     "patterns": [
@@ -372,18 +398,22 @@
             ]
         },
         "complexVariable": {
-            "name": "variable.other.silverstripe.complex",
+            "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe.complex",
             "begin": "(\\$[a-zA-Z_][\\w]*)",
             "beginCaptures": {
-                "1": { "name": "variable.other.silverstripe" }
+                "1": {
+                    "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe"
+                }
             },
             "end": "(?=\\s|$|[^\\w\\.$\\(\\)']|\\))",
             "patterns": [
                 {
-                    "name": "support.function.silverstripe",
+                    "name": "punctuation.separator.key-value.html.silverstripe",
                     "match": "(\\.[a-zA-Z_][\\w]*)(?=\\()",
                     "captures": {
-                        "1": { "name": "support.function.silverstripe" }
+                        "1": {
+                            "name": "punctuation.separator.key-value.html.silverstripe"
+                        }
                     }
                 },
                 {
@@ -394,7 +424,9 @@
                         {
                             "name": "meta.function-call.argument-list.silverstripe",
                             "patterns": [
-                                { "include": "#variablePatterns" },
+                                {
+                                    "include": "#variablePatterns"
+                                },
                                 {
                                     "name": "string.quoted.double.silverstripe",
                                     "begin": "\"",
@@ -422,16 +454,18 @@
                     ]
                 },
                 {
-                    "name": "support.function.silverstripe",
+                    "name": "punctuation.separator.key-value.html.silverstripe",
                     "match": "\\.[a-zA-Z_][\\w]*"
                 }
             ]
         },
         "simpleVariable": {
-            "name": "variable.other.silverstripe.simple",
+            "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe.simple",
             "match": "\\$[a-zA-Z_][\\w]*",
             "captures": {
-                "0": { "name": "variable.other.silverstripe" }
+                "0": {
+                    "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe"
+                }
             }
         }
     }
