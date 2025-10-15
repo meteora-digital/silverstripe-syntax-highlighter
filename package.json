@@ -56,5 +56,6 @@
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:meteora-digital/silverstripe-syntax-highlighter.git"
-  }
+  },
+  "icon": "icon.png"
 }
