@@ -1,0 +1,59 @@
+{
+  "name": "silverstripe-syntax-highlighter",
+  "displayName": "SilverStripe Syntax Highlighter",
+  "description": "Highlights SilverStripe Template Language",
+  "version": "0.0.1",
+  "author": "Emmanuel Davies",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "silverstripe",
+        "aliases": ["SilverStripe", "silverstripe"],
+        "extensions": [".ss"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "silverstripe",
+        "scopeName": "text.html.silverstripe",
+        "path": "./syntaxes/silverstripe.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.silverstripe.injection",
+        "path": "./syntaxes/silverstripe-injection.tmLanguage.json",
+        "injectTo": [
+          "text.html.silverstripe",
+          "text.html.basic",
+          "source.css",
+          "source.js"
+        ]
+      }
+    ],
+    "configurationDefaults": {
+      "files.associations": {
+        "*.ss": "silverstripe"
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.105.0",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0"
+  }
+}
