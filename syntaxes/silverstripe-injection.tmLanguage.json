@@ -12,20 +12,20 @@
             "contentName": "meta.silverstripe"
         },
         {
-            "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe",
+            "name": "constant.numeric.silverstripe variable.silverstripe",
             "begin": "(\\{)(\\$)",
             "beginCaptures": {
                 "1": {
-                    "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe.begin"
+                    "name": "constant.numeric.silverstripe variable.silverstripe.begin"
                 },
                 "2": {
-                    "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe"
+                    "name": "constant.numeric.silverstripe variable.silverstripe"
                 }
             },
             "end": "(\\})",
             "endCaptures": {
                 "1": {
-                    "name": "punctuation.definition.tag.end.html.silverstripe variable.silverstripe.end"
+                    "name": "constant.numeric.silverstripe variable.silverstripe.end"
                 }
             },
             "patterns": [
@@ -157,11 +157,11 @@
             "contentName": "meta.silverstripe"
         },
         {
-            "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe.complex",
+            "name": "constant.numeric.silverstripe variable.silverstripe.complex",
             "begin": "(\\$[a-zA-Z_][\\w]*)",
             "beginCaptures": {
                 "1": {
-                    "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe"
+                    "name": "constant.numeric.silverstripe variable.silverstripe"
                 }
             },
             "end": "(?=\\s|$|[^\\w\\.$\\(\\)']|\\))",
@@ -220,16 +220,16 @@
             "contentName": "meta.silverstripe"
         },
         {
-            "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe.simple",
+            "name": "constant.numeric.silverstripe variable.silverstripe.simple",
             "match": "\\$[a-zA-Z_][\\w]*",
             "captures": {
                 "0": {
-                    "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe"
+                    "name": "constant.numeric.silverstripe variable.silverstripe"
                 }
             }
         },
         {
-            "name": "block.silverstripe",
+            "name": "support.function.silverstripe",
             "begin": "<%(?!-)",
             "beginCaptures": {
                 "0": {
@@ -311,20 +311,20 @@
             ]
         },
         "bracedVariable": {
-            "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe",
+            "name": "constant.numeric.silverstripe variable.silverstripe",
             "begin": "(\\{)(\\$)",
             "beginCaptures": {
                 "1": {
-                    "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe.begin"
+                    "name": "constant.numeric.silverstripe variable.silverstripe.begin"
                 },
                 "2": {
-                    "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe"
+                    "name": "constant.numeric.silverstripe variable.silverstripe"
                 }
             },
             "end": "(\\})",
             "endCaptures": {
                 "1": {
-                    "name": "punctuation.definition.tag.end.html.silverstripe variable.silverstripe.end"
+                    "name": "constant.numeric.silverstripe variable.silverstripe.end"
                 }
             },
             "patterns": [
@@ -404,11 +404,11 @@
             "contentName": "meta.silverstripe"
         },
         "complexVariable": {
-            "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe.complex",
+            "name": "constant.numeric.silverstripe variable.silverstripe.complex",
             "begin": "(\\$[a-zA-Z_][\\w]*)",
             "beginCaptures": {
                 "1": {
-                    "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe"
+                    "name": "constant.numeric.silverstripe variable.silverstripe"
                 }
             },
             "end": "(?=\\s|$|[^\\w\\.$\\(\\)']|\\))",
@@ -467,11 +467,11 @@
             "contentName": "meta.silverstripe"
         },
         "simpleVariable": {
-            "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe.simple",
+            "name": "constant.numeric.silverstripe variable.silverstripe.simple",
             "match": "\\$[a-zA-Z_][\\w]*",
             "captures": {
                 "0": {
-                    "name": "punctuation.definition.tag.begin.html.silverstripe variable.silverstripe"
+                    "name": "constant.numeric.silverstripe variable.silverstripe"
                 }
             }
         }
