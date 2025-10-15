@@ -21,42 +21,20 @@
         </div>
     <% end_if %>
 
-    <% if $UserLevel === 'admin' %>
-        <p>Admin access granted</p>
-    <% else_if $UserLevel == 'user' %>
-        <p>User access granted</p>
-    <% else_if $Status != 'inactive' %>
-        <p>Active user</p>
-    <% else_if $Score >= 100 %>
-        <p>High score achieved!</p>
+    <% if $Articles.Count %>
+        <% loop $Articles %>
+            <article>
+                <h2>$Title</h2>
+                <p>$Content.Summary(100)</p>
+                <% if $Image %>
+                    <img src="{$Image.Fill(200,200).URL}" alt="$Image.Title.ATT">
+                <% end_if %>
+            </article>
+        <% end_loop %>
     <% end_if %>
-
-    <% loop $Articles %>
-        <article>
-            <h2>$Title</h2>
-            <p>$Content.Summary(100)</p>
-            <% if $Image %>
-                <img src="{$Image.FocusFill(200,200).URL}" alt="$Image.Title">
-            <% end_if %>
-            <p>Style tag: {$getStyleTag('_resources/themes/marmalade/dist/styles/inspiration.css', 'InspirationCSS')}</p>
-        </article>
-    <% end_loop %>
-
-    <% with $SiteConfig %>
-        <% if $Title %>
-            <footer>
-                <p>&copy; $Title</p>
-            </footer>
-        <% else %>
-            <footer>
-                <p>&copy; My Website</p>
-            </footer>
-        <% end_if %>
-    <% end_with %>
 
     <%-- Include and require --%>
     <% include SiteNavigation %>
-    <% include Toast\Includes\InspirationDetails %>
     <% require css('themes/mytheme/css/layout.css') %>
 
     <%-- Caching --%>
