@@ -29,10 +29,7 @@
         "scopeName": "source.silverstripe.injection",
         "path": "./syntaxes/silverstripe-injection.tmLanguage.json",
         "injectTo": [
-          "text.html.silverstripe",
-          "text.html.basic",
-          "source.css",
-          "source.js"
+          "text.html.silverstripe"
         ]
       }
     ],
