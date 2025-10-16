@@ -44,12 +44,18 @@
 
     <script>
         // JavaScript code here
-        console.log('Page loaded');
+        document.addEventListener('DOMContentLoaded', function() {
+            if (true) {
+                console.log('DOM fully loaded and parsed');
+            }
+        });
     </script>
 
     <style>
         /* CSS styles here */
-        body { font-family: Arial, sans-serif; }
+        body {
+            font-family: Arial, sans-serif;
+            }
     </style>
 </body>
 </html>

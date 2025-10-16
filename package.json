@@ -2,7 +2,7 @@
   "name": "enhanced-silverstripe-templates",
   "displayName": "Enhanced SilverStripe Template Language",
   "description": "SilverStripe Template Language Highlighter and Snippets",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "author": "Emmanuel Davies",
   "engines": {
     "vscode": "^1.105.0"
