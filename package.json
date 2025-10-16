@@ -14,7 +14,7 @@
     "languages": [
       {
         "id": "silverstripe",
-        "aliases": ["SilverStripe", "silverstripe"],
+        "aliases": ["SilverStripe", "silverstripe", "SS", "ss"],
         "extensions": [".ss"],
         "configuration": "./language-configuration.json"
       }
