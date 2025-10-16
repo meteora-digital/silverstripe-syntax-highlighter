@@ -29,7 +29,7 @@
     {
         "beforeText": "^\\s*<%\\s*(loop|with|if|else_if|else)\\b.*%>\\s*$",
         "action": {
-            "indent": "indentOutdent"
+            "indent": "indent"
         }
     },
     {
