@@ -47,7 +47,7 @@
         }
     },
     {
-        "beforeText": "^\\s*<%\\s*(if|loop|with)\\b.*%>\\s*$",
+        "beforeText": "^\\s*<%\\s*(if|loop|with|else|else_if)\\b.*%>\\s*$",
         "action": {
             "indent": "indent"
         }
