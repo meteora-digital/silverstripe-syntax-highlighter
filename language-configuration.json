@@ -24,5 +24,20 @@
     ["\"", "\""],
     ["'", "'"],
     ["<%", "%>"]
-  ]
+  ],
+  "onEnterRules": [
+    {
+        "beforeText": "^\\s*<%\\s*(loop|with|if|else_if|else)\\b.*%>\\s*$",
+        "action": {
+            "indent": "indentOutdent"
+        }
+    },
+    {
+        "beforeText": "^\\s*<([a-zA-Z][\\w\\-]*)[^>]*>\\s*$",
+        "afterText": "^\\s*</[a-zA-Z][\\w\\-]*>\\s*$",
+        "action": {
+            "indent": "indentOutdent",
+        }
+    }
+  ],
 }
