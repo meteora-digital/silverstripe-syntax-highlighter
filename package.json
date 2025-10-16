@@ -37,7 +37,13 @@
       "files.associations": {
         "*.ss": "silverstripe"
       }
-    }
+    },
+    "snippets": [
+      {
+        "language": "silverstripe",
+        "path": "./silverstripe.code-snippets.json"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",

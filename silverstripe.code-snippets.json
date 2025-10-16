@@ -1,0 +1,95 @@
+{
+  "Loop Block": {
+    "prefix": "loop",
+    "body": [
+      "<% loop $${1:Collection} %>",
+      "  $${2:Item}",
+      "<% end_loop %>"
+    ],
+    "description": "SilverStripe loop block"
+  },
+  "If Block": {
+    "prefix": "if",
+    "body": [
+      "<% if $${1:Condition} %>",
+      "  $${2:Content}",
+      "<% end_if %>"
+    ],
+    "description": "SilverStripe if block"
+  },
+  "Include": {
+    "prefix": "include",
+    "body": [
+      "<% include ${1:TemplateName} %>"
+    ],
+    "description": "SilverStripe include statement"
+  },
+  "Themed CSS": {
+    "prefix": "themedcss",
+    "body": [
+      "<% require themedCSS('${1:myfile.css}') %>"
+    ],
+    "description": "SilverStripe require themed CSS"
+  },
+  "Require CSS": {
+    "prefix": "requirecss",
+    "body": [
+        "<% require css('${1:myfile.css}') %>"
+    ],
+    "description": "SilverStripe require CSS"
+  },
+  "Require JS": {
+    "prefix": "requirejs",
+    "body": [
+        "<% require javascript('${1:myfile.js}') %>"
+    ],
+    "description": "SilverStripe require JS"
+  },
+  "Cached Block": {
+    "prefix": "cached",
+    "body": [
+      "<% cached '${1:key}', $${2:Dependency} %>",
+      "  $${3:Content}",
+      "<% end_cached %>"
+    ],
+    "description": "SilverStripe cached block"
+  },
+  "With Block": {
+    "prefix": "with",
+    "body": [
+      "<% with $${1:Object} %>",
+      "  $${2:Content}",
+      "<% end_with %>"
+    ],
+    "description": "SilverStripe with block"
+  },
+  "If-Else Block": {
+    "prefix": "ifelse",
+    "body": [
+      "<% if $${1:Condition} %>",
+      "  $${2:IfContent}",
+      "<% else %>",
+      "  $${3:ElseContent}",
+      "<% end_if %>"
+    ],
+    "description": "SilverStripe if-else block"
+  },
+  "Else If Block": {
+    "prefix": "elseif",
+    "body": [
+      "<% if $${1:Condition} %>",
+      "  $${2:IfContent}",
+      "<% else_if $${3:OtherCondition} %>",
+      "  $${4:ElseIfContent}",
+      "<% end_if %>"
+    ],
+    "description": "SilverStripe else_if block"
+  },
+  "Comment Block": {
+    "prefix": "sscomment",
+    "body": [
+      "<%-- ${1:Comment} --%>"
+    ],
+    "description": "SilverStripe comment block"
+  }
+}
