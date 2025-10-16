@@ -27,16 +27,29 @@
   ],
   "onEnterRules": [
     {
-        "beforeText": "^\\s*<%\\s*(loop|with|if|else_if|else)\\b.*%>\\s*$",
-        "action": {
-            "indent": "indent"
-        }
-    },
-    {
         "beforeText": "^\\s*<([a-zA-Z][\\w\\-]*)[^>]*>\\s*$",
         "afterText": "^\\s*</[a-zA-Z][\\w\\-]*>\\s*$",
         "action": {
             "indent": "indentOutdent",
+        }
+    },
+    {
+        "beforeText": "^\\s*<(?!(img|input|br|hr|meta|link|area|base|col|embed|param|source|track|wbr)\\b)([a-zA-Z][\\w\\-]*)[^>]*>\\s*$",
+        "action": {
+            "indent": "indent",
+        }
+    },
+    {
+        "beforeText": "^\\s*<%.*%>\\s*$",
+        "afterText": "^\\s*<%\\s*(end_\\w+|else(?:_\\w+)?)(\\s+.*)?%>\\s*$",
+        "action": {
+            "indent": "indentOutdent"
+        }
+    },
+    {
+        "beforeText": "^\\s*<%\\s*(if|loop|with)\\b.*%>\\s*$",
+        "action": {
+            "indent": "indent"
         }
     }
   ],
