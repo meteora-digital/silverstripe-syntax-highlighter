@@ -4,10 +4,8 @@
     },
     "brackets": [
         ["{", "}"],
-        ["[", "]"],
         ["(", ")"],
-        ["<", ">"],
-        ["<%", "%>"]
+        ["<%--", "--%>"]
     ],
     "autoClosingPairs": [
         ["{", "}"],
@@ -15,7 +13,7 @@
         ["(", ")"],
         ["\"", "\""],
         ["'", "'"],
-        ["<%", "%>"]
+        { "open": "<%--", "close": "--%>", "notIn": [ "comment", "string" ]}
     ],
     "surroundingPairs": [
         ["{", "}"],
@@ -23,7 +21,7 @@
         ["(", ")"],
         ["\"", "\""],
         ["'", "'"],
-        ["<%", "%>"]
+        ["<", ">"]
     ],
     "embeddedLanguages": {
         "script": "javascript",
@@ -38,33 +36,15 @@
             }
         },
         {
-            "beforeText": "^\\s*<(?!(img|input|br|hr|meta|link|area|base|col|embed|param|source|track|wbr)\\b)([a-zA-Z][\\w\\-]*)[^>]*>\\s*$",
-            "action": {
-                "indent": "indent",
-            }
-        },
-        {
             "beforeText": "^\\s*<%.*%>\\s*$",
             "afterText": "^\\s*<%\\s*(end_\\w+|else(?:_\\w+)?)(\\s+.*)?%>\\s*$",
             "action": {
                 "indent": "indentOutdent"
             }
         },
-        {
-            "beforeText": "^\\s*<%\\s*(if|loop|with|else|else_if)\\b.*%>\\s*$",
-            "action": {
-                "indent": "indent"
-            }
-        },
-        {
-            "beforeText": "^\\s*<%\\s*(end_(if|loop|with|cached)|else(?:_if)?)\\s*%>\\s*$",
-            "action": {
-                "indent": "outdent"
-            }
-        }
     ],
     "indentationRules": {
         "increaseIndentPattern": "^\\s*(<%\\s*(if|loop|with|else_if|else|cached)\\b.*%>|<(?!\\/)(?!img|input|br|hr|meta|link|area|base|col|embed|param|source|track|wbr)[a-zA-Z][\\w\\-]*[^>]*?(?<!\\/)>\\s*|.*\\{\\s*)$",
-        "decreaseIndentPattern": "^\\s*(<%\\s*(end_(if|loop|with|cached)|else(?:_if)?)\\s*%>|<\\/([a-zA-Z][\\w\\-]*)\\s*>\\s*|\\}\\s*(\\)\\s*(;|,)?\\s*)?(\\s*\\(\\)\\s*;?)?\\s*)$"
+        "decreaseIndentPattern": "^\\s*(<%\\s*(end_(if|loop|with|cached)|else(?:_if)?)\\s*%>\\s*(--%>)?|<\\/([a-zA-Z][\\w\\-]*)\\s*>\\s*|\\}\\s*(\\)\\s*(;|,)?\\s*)?(\\s*\\(\\)\\s*;?)?\\s*)$"
     }
 }
