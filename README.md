@@ -37,19 +37,23 @@ SilverStripe comments (`<%-- ... --%>`) may not be styled as you expect by defau
     "textMateRules": [
         {
             "scope": [
-                "comment.block.silverstripe",
-                "comment.block.silverstripe constant.numeric.silverstripe",
-                "comment.block.silverstripe string.silverstripe",
-                "comment.block.silverstripe punctuation.definition.string.begin.html.silverstripe",
-                "comment.block.silverstripe punctuation.definition.string.end.html.silverstripe",
-                "comment.block.silverstripe punctuation.separator.key-value.html.silverstripe",
-                "comment.block.silverstripe variable.silverstripe",
-                "comment.block.silverstripe support.function.silverstripe"
-            ],
-            "settings": {
-                "foreground": "#838383",
-                "fontStyle": "italic"
-            }
+                    "comment.block.silverstripe",
+                    "comment.block.silverstripe constant.character.escape.silverstripe",
+                    "comment.block.silverstripe constant.numeric.silverstripe",
+                    "comment.block.silverstripe string.silverstripe",
+                    "comment.block.silverstripe punctuation.definition.tag.begin.html.silverstripe",
+                    "comment.block.silverstripe punctuation.definition.tag.end.html.silverstripe",
+                    "comment.block.silverstripe punctuation.separator.key-value.html.silverstripe",
+                    "comment.block.silverstripe variable.silverstripe",
+                    "comment.block.silverstripe punctuation.definition.string.begin.html.silverstripe",
+                    "comment.block.silverstripe punctuation.definition.string.end.html.silverstripe",
+                    "comment.block.silverstripe entity.other.attribute-name.html.silverstripe",
+                    "comment.block.silverstripe support.function.silverstripe",
+                ],
+                "settings": {
+                    "foreground": "#838383",
+                    "fontStyle": "italic"
+                }
         }
     ]
 }
