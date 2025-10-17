@@ -44,7 +44,7 @@
         },
     ],
     "indentationRules": {
-        "increaseIndentPattern": "^\\s*(<%\\s*(if|loop|with|else_if|else|cached)\\b.*%>|<(?!\\/)(?!img|input|br|hr|meta|link|area|base|col|embed|param|source|track|wbr)[a-zA-Z][\\w\\-]*[^>]*?(?<!\\/)>\\s*|.*\\{\\s*)$",
+        "increaseIndentPattern": "^\\s*(<%\\s*(if|loop|with|else_if|else|cached)\\b.*%>|<(?!\\/)(?!img|input|br|hr|meta|link|area|base|col|embed|param|source|track|wbr)[a-zA-Z][\\w\\-]*(?:[^>]*<%.*%>[^>]*)*[^>]*?(?<!\\/)>\\s*|.*\\{\\s*)$",
         "decreaseIndentPattern": "^\\s*(<%\\s*(end_(if|loop|with|cached)|else(?:_if)?)\\s*%>|<\\/([a-zA-Z][\\w\\-]*)\\s*>\\s*|\\}\\s*(\\)\\s*(;|,)?\\s*)?(\\s*\\(\\)\\s*;?)?|(?<!^\\s*<%--)\\s*.*--%>\\s*$)",
     }
 }
