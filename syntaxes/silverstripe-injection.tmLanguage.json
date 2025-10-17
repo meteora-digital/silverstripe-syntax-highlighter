@@ -72,11 +72,11 @@
                     ]
                 },
                 {
-                    "name": "punctuation.separator.key-value.html.silverstripe",
+                    "name": "entity.other.attribute-name.html.silverstripe",
                     "match": "(\\.[a-zA-Z_][\\w]*)(?=\\()",
                     "captures": {
                         "1": {
-                            "name": "punctuation.separator.key-value.html.silverstripe"
+                            "name": "entity.other.attribute-name.html.silverstripe"
                         }
                     }
                 },
@@ -150,7 +150,7 @@
                     ]
                 },
                 {
-                    "name": "punctuation.separator.key-value.html.silverstripe",
+                    "name": "entity.other.attribute-name.html.silverstripe",
                     "match": "\\.[a-zA-Z_][\\w]*"
                 }
             ],
@@ -167,11 +167,11 @@
             "end": "(?=\\s|$|[^\\w\\.$\\(\\)']|\\))",
             "patterns": [
                 {
-                    "name": "punctuation.separator.key-value.html.silverstripe",
+                    "name": "entity.other.attribute-name.html.silverstripe",
                     "match": "(\\.[a-zA-Z_][\\w]*)(?=\\()",
                     "captures": {
                         "1": {
-                            "name": "punctuation.separator.key-value.html.silverstripe"
+                            "name": "entity.other.attribute-name.html.silverstripe"
                         }
                     }
                 },
@@ -213,7 +213,7 @@
                     ]
                 },
                 {
-                    "name": "punctuation.separator.key-value.html.silverstripe",
+                    "name": "entity.other.attribute-name.html.silverstripe",
                     "match": "\\.[a-zA-Z_][\\w]*"
                 }
             ],
@@ -233,13 +233,13 @@
             "begin": "<%(?!-)",
             "beginCaptures": {
                 "0": {
-                    "name": "punctuation.separator.key-value.html.silverstripe"
+                    "name": "punctuation.definition.tag.begin.html.silverstripe"
                 }
             },
             "end": "(?<!-)%>",
             "endCaptures": {
                 "0": {
-                    "name": "punctuation.separator.key-value.html.silverstripe"
+                    "name": "punctuation.definition.tag.begin.html.silverstripe"
                 }
             },
             "patterns": [
@@ -414,11 +414,11 @@
             "end": "(?=\\s|$|[^\\w\\.$\\(\\)']|\\))",
             "patterns": [
                 {
-                    "name": "punctuation.separator.key-value.html.silverstripe",
+                    "name": "entity.other.attribute-name.html.silverstripe",
                     "match": "(\\.[a-zA-Z_][\\w]*)(?=\\()",
                     "captures": {
                         "1": {
-                            "name": "punctuation.separator.key-value.html.silverstripe"
+                            "name": "entity.other.attribute-name.html.silverstripe"
                         }
                     }
                 },
@@ -460,7 +460,7 @@
                     ]
                 },
                 {
-                    "name": "punctuation.separator.key-value.html.silverstripe",
+                    "name": "entity.other.attribute-name.html.silverstripe",
                     "match": "\\.[a-zA-Z_][\\w]*"
                 }
             ],
