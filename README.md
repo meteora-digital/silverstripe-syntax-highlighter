@@ -2,9 +2,9 @@
 
 Supercharge your Silverstripe development in VS Code! This extension brings vibrant syntax highlighting to `.ss` template files, making your code pop with colour and clarity. Say goodbye to old and broken extensions and hello to a coding experience that's as dynamic as your Silverstripe sites.
 
-## Usage
+## See for yourself
 
-Ready to level up? Open any `.ss` file in VS Code and watch the magic happen! Syntax highlighting kicks in automatically for all Silverstripe goodies, including:
+Open any `.ss` file in VS Code and watch the magic happen! Syntax highlighting kicks in automatically for all Silverstripe goodies.
 
 ```ss
 <!doctype html>
@@ -61,7 +61,6 @@ Ready to level up? Open any `.ss` file in VS Code and watch the magic happen! Sy
         </style>
     </body>
 </html>
-
 ```
 
 ## Custom Styling
