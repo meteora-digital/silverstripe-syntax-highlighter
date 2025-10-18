@@ -2,7 +2,7 @@
 <html lang="en-NZ">
     <head>
         <title>$Title</title>
-        <%-- This is a SilverStripe comment --%>
+        <%-- This is a Silverstripe comment --%>
     </head>
     <body>
         <h1>$PageTitle</h1>

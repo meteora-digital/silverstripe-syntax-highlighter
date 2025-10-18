@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-    "name": "SilverStripe Injection",
+    "name": "Silverstripe Injection",
     "scopeName": "source.silverstripe.injection",
     "injectionSelector": "L:text.html.silverstripe, L:text.html.basic, L:source.css, L:source.js",
     "patterns": [

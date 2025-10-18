@@ -1,4 +1,4 @@
-# Enhanced Silverstripe Templating
+# Enhanced Silverstripe Templates
 
 Supercharge your Silverstripe development in VS Code! This extension brings vibrant syntax highlighting to `.ss` template files, making your code pop with colour and clarity. Say goodbye to old and broken extensions and hello to a coding experience that's as dynamic as your Silverstripe sites.
 
@@ -11,7 +11,7 @@ Open any `.ss` file in VS Code and watch the magic happen! Syntax highlighting k
 <html lang="en-NZ">
     <head>
         <title>$Title</title>
-        <%-- This is a SilverStripe comment --%>
+        <%-- This is a Silverstripe comment --%>
     </head>
     <body>
         <h1>$PageTitle</h1>
