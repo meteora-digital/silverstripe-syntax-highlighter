@@ -5,10 +5,7 @@
     "injectionSelector": "L:text.html.silverstripe, L:text.html.basic, L:source.css, L:source.js",
     "patterns": [
         {
-            "name": "comment.block.silverstripe",
-            "begin": "<%--",
-            "end": "--%>",
-            "contentName": "meta.silverstripe"
+            "include": "#commentBlock"
         },
         {
             "include": "#bracedVariable"
@@ -30,7 +27,6 @@
                 "0": { "name": "punctuation.definition.tag.begin.html.silverstripe" }
             },
             "patterns": [
-                { "include": "#commentBlock" },
                 { "include": "#ifControl" },
                 { "include": "#doubleString" },
                 { "include": "#singleString" }
@@ -43,7 +39,8 @@
             "name": "comment.block.silverstripe",
             "begin": "<%--",
             "end": "--%>",
-            "contentName": "meta.silverstripe"
+            "patterns": [
+            ]
         },
         "doubleString": {
             "name": "string.quoted.double.silverstripe string.silverstripe",
