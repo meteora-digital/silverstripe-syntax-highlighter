@@ -1,77 +1,78 @@
-# Enhanced SilverStripe Templates Syntax Highlighting
+# Enhanced Silverstripe Templating
 
-A Visual Studio Code extension providing advanced syntax highlighting for SilverStripe template language (`.ss`) files.
-
-## Features
-
-- Inherits all HTML highlighting
-- SilverStripe comments: `<%-- comment --%>`
-- Control structures: `<% if %>`, `<% loop %>`, `<% with %>`, `<% else_if %>`, etc.
-- Variables: `$Variable`, `$Object.Property`, `$Method()`
-- Expressions: `{$Variable}`
-- Template functions: `base_tag`, `require`, `include`, `cached`, etc.
-- Dot notation, method chains, and complex expressions
-- Custom coloring for includes, function calls, properties, and logic operators
-- Caching blocks: `<% cached ... %> ... <% end_cached %>`
-- Automatic file association for `.ss` files
+Supercharge your Silverstripe development in VS Code! This extension brings vibrant syntax highlighting to `.ss` template files, making your code pop with colour and clarity. Say goodbye to old and broken extensions and hello to a coding experience that's as dynamic as your Silverstripe sites.
 
 ## Usage
 
-Open any `.ss` file in VS Code. Syntax highlighting will be automatically applied for all SilverStripe template constructs, including:
+Ready to level up? Open any `.ss` file in VS Code and watch the magic happen! Syntax highlighting kicks in automatically for all Silverstripe goodies, including:
 
-- Variables: `$Title`, `$User.Profile.Avatar.URL`, `$Image.Fill(200,200).URL`
-- Control blocks: `<% if $Condition %> ... <% end_if %>`
-- Includes: `<% include SiteNavigation %>`
-- Requirements: `<% require css('themes/mytheme/css/layout.css') %>`
-- Expressions: `{$Email}`, `{$getStyleTag(...)}`
-- Caching: `<% cached 'navigation', $LastEdited %> ... <% end_cached %>`
+```ss
+$Title
+$User.Profile.Avatar.URL
+$Image.Fill(200,200).URL
+```
 
-See `sample.ss` for a comprehensive example.
+```ss
+<% if $Condition %>
+    <!-- content here -->
+<% end_if %>
+```
 
-## Custom Comment Styling
+```ss
+<% include SiteNavigation %>
+```
 
-SilverStripe comments (`<%-- ... --%>`) may not be styled as you expect by default. To improve their appearance, add the following to your VS Code `settings.json`:
+```ss
+<% require css('themes/mytheme/css/layout.css') %>
+```
+
+```ss
+{$Email}
+{$getStyleTag(...)}
+```
+
+```ss
+<% cached 'navigation', $LastEdited %>
+    <!-- cached content -->
+<% end_cached %>
+```
+
+## Custom Styling
+
+Want to tweak the look? Let's make it yours!
+
+1. Inspect the TextMate scopes: Press `Cmd/Ctrl + Shift + P` to open the Command Palette, then search for "Developer: Inspect Editor Tokens and Scopes".
+2. Add customizations to your `settings.json`. For instance, to style Silverstripe functions in italic blue:
 
 ```jsonc
 "editor.tokenColorCustomizations": {
     "textMateRules": [
         {
-            "scope": [
-                    "comment.block.silverstripe",
-                    "comment.block.silverstripe constant.character.escape.silverstripe",
-                    "comment.block.silverstripe constant.numeric.silverstripe",
-                    "comment.block.silverstripe string.silverstripe",
-                    "comment.block.silverstripe punctuation.definition.tag.begin.html.silverstripe",
-                    "comment.block.silverstripe punctuation.definition.tag.end.html.silverstripe",
-                    "comment.block.silverstripe punctuation.separator.key-value.html.silverstripe",
-                    "comment.block.silverstripe variable.silverstripe",
-                    "comment.block.silverstripe punctuation.definition.string.begin.html.silverstripe",
-                    "comment.block.silverstripe punctuation.definition.string.end.html.silverstripe",
-                    "comment.block.silverstripe entity.other.attribute-name.html.silverstripe",
-                    "comment.block.silverstripe support.function.silverstripe",
-                ],
-                "settings": {
-                    "foreground": "#838383",
-                    "fontStyle": "italic"
-                }
+            "scope": "support.function.silverstripe",
+            "settings": {
+                "foreground": "#267beb",
+                "fontStyle": "italic"
+            }
         }
     ]
 }
 ```
 
-This will ensure SilverStripe comments are styled consistently.
+Experiment and have fun personalizing your theme!
 
-## Development & Local Installation
+## Extension Development & Local Installation
 
-1. Run `vsce package` in this folder to create a `.vsix` file.
+Building locally? Here's how to get it running:
+
+1. Run `vsce package` in this folder to whip up a `.vsix` file.
 2. Install in VS Code: `code --install-extension <your-vsix-file>`
-3. Open a `.ss` file to see the highlighting.
-4. To update, re-package and re-install the `.vsix`.
+3. Open a `.ss` file and bask in the glory.
+4. For updates, just re-package and re-install—easy peasy!
 
 ## File Association
 
-The extension automatically activates for `.ss` files.
+No setup needed! The extension auto-activates for `.ss` files. Just code away.
 
 ## License
 
-MIT
+MIT – Free as a Silverstripe template!
