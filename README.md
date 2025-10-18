@@ -7,34 +7,61 @@ Supercharge your Silverstripe development in VS Code! This extension brings vibr
 Ready to level up? Open any `.ss` file in VS Code and watch the magic happen! Syntax highlighting kicks in automatically for all Silverstripe goodies, including:
 
 ```ss
-$Title
-$User.Profile.Avatar.URL
-$Image.Fill(200,200).URL
-```
+<!doctype html>
+<html lang="en-NZ">
+    <head>
+        <title>$Title</title>
+        <%-- This is a SilverStripe comment --%>
+    </head>
+    <body>
+        <h1>$PageTitle</h1>
 
-```ss
-<% if $Condition %>
-    <!-- content here -->
-<% end_if %>
-```
+        <%-- Variable examples --%>
+        <p>Welcome $FirstName $LastName!</p>
+        <p>User email: $Email</p>
+        <p>Complex variable: $User.Profile.Avatar.URL</p>
+        <p>Method call: $User.getFullName()</p>
 
-```ss
-<% include SiteNavigation %>
-```
+        <%-- Control structures with operators --%>
+        <% if $Content || not $HideDetails %>
+            <div class="welcome">
+                <p>Welcome to our site!</p>
+            </div>
+        <% end_if %>
 
-```ss
-<% require css('themes/mytheme/css/layout.css') %>
-```
+        <% if $Articles.Count %>
+            <% loop $Articles %>
+                <article>
+                    <h2>$Title</h2>
+                    <p>$Content.Summary(100)</p>
+                    <% if $Image %>
+                        <img src="{$Image.Fill(200,200).Convert('webp').URL}" alt="{$Image.Title.ATT}">
+                    <% end_if %>
+                </article>
+            <% end_loop %>
+        <% end_if %>
 
-```ss
-{$Email}
-{$getStyleTag(...)}
-```
+        <%-- Include and require --%>
+        <% include SiteNavigation %>
+        <% require css('themes/mytheme/css/layout.css') %>
 
-```ss
-<% cached 'navigation', $LastEdited %>
-    <!-- cached content -->
-<% end_cached %>
+        <%-- Caching --%>
+        <% cached 'navigation', $LastEdited %>
+            <% include SiteNavigation %>
+        <% end_cached %>
+
+        <script>
+            // JavaScript code here
+            console.log('Page loaded');
+        </script>
+
+        <style>
+            /* CSS styles here */
+            body { font-family: Arial, sans-serif; }
+        </style>
+    </body>
+</html>
+
 ```
 
 ## Custom Styling
