@@ -120,6 +120,10 @@
                             "include": "#string"
                         },
                         {
+                            "match": ",",
+                            "name": "punctuation.separator.argument.silverstripe"
+                        },
+                        {
                             "include": "#commonExpressions"
                         }
                     ]
@@ -134,11 +138,11 @@
                 },
                 {
                     "match": "\\bnot\\b|!",
-                    "name": "keyword.operator.silverstripe"
+                    "name": "keyword.operator.logical.not.silverstripe"
                 },
                 {
                     "match": "==|=|!=|<=|>=|<|>|&&|\\|\\|",
-                    "name": "keyword.operator.silverstripe"
+                    "name": "keyword.operator.logical.silverstripe"
                 }
             ]
         },
@@ -147,7 +151,7 @@
             "begin": "(\\{)(\\$)",
             "beginCaptures": {
                 "1": {
-                    "name": "entity.name.silverstripe variable.silverstripe"
+                    "name": "entity.name.silverstripe variable.silverstripe.brace"
                 },
                 "2": {
                     "name": "entity.name.silverstripe variable.silverstripe"
@@ -156,7 +160,7 @@
             "end": "(\\})",
             "endCaptures": {
                 "1": {
-                    "name": "entity.name.silverstripe variable.silverstripe"
+                    "name": "entity.name.silverstripe variable.silverstripe.brace"
                 }
             },
             "patterns": [
