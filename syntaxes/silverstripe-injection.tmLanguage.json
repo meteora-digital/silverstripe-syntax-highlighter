@@ -8,30 +8,37 @@
             "include": "#commentBlock"
         },
         {
-            "include": "#bracedVariable"
+            "include": "#variablePatterns"
         },
         {
-            "include": "#complexVariable"
-        },
-        {
-            "include": "#simpleVariable"
-        },
-        {
-            "name": "support.function.silverstripe",
+            "name": "keyword.silverstripe",
             "begin": "<%(?!-)",
             "beginCaptures": {
-                "0": { "name": "punctuation.definition.tag.begin.html.silverstripe" }
+                "0": {
+                    "name": "punctuation.definition.silverstripe"
+                }
             },
             "end": "(?<!-)%>",
             "endCaptures": {
-                "0": { "name": "punctuation.definition.tag.begin.html.silverstripe" }
+                "0": {
+                    "name": "punctuation.definition.silverstripe"
+                }
             },
             "patterns": [
-                { "include": "#ifControl" },
-                { "include": "#doubleString" },
-                { "include": "#singleString" }
-            ],
-            "contentName": "meta.silverstripe"
+                {
+                    "name": "punctuation.separator.silverstripe",
+                    "match": ","
+                },
+                {
+                    "include": "#includeControl"
+                },
+                {
+                    "include": "#ifControl"
+                },
+                {
+                    "include": "#string"
+                }
+            ]
         }
     ],
     "repository": {
@@ -57,124 +64,192 @@
                 }
             ]
         },
-        "doubleString": {
-            "name": "string.quoted.double.silverstripe string.silverstripe",
-            "begin": "\"",
-            "beginCaptures": {
-                "0": { "name": "punctuation.definition.string.begin.html.silverstripe" }
-            },
-            "end": "\"",
-            "endCaptures": {
-                "0": { "name": "punctuation.definition.string.end.html.silverstripe" }
-            },
-            "patterns": [
-                { "name": "constant.character.escape.silverstripe", "match": "\\\\." }
-            ]
-        },
-        "singleString": {
-            "name": "string.quoted.single.silverstripe string.silverstripe",
-            "begin": "'",
-            "beginCaptures": {
-                "0": { "name": "punctuation.definition.string.begin.html.silverstripe" }
-            },
-            "end": "'",
-            "endCaptures": {
-                "0": { "name": "punctuation.definition.string.end.html.silverstripe" }
-            },
-            "patterns": [
-                { "name": "constant.character.escape.silverstripe", "match": "\\\\." }
-            ]
-        },
-        "functionArguments": {
-            "name": "meta.function-call.arguments.silverstripe",
-            "begin": "\\(",
-            "end": "\\)",
+        "string": {
             "patterns": [
                 {
-                    "name": "meta.function-call.argument-list.silverstripe",
+                    "name": "string.quoted.double.silverstripe string.silverstripe",
+                    "begin": "\"",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.begin.html.silverstripe"
+                        }
+                    },
+                    "end": "\"",
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.html.silverstripe"
+                        }
+                    }
+                },
+                {
+                    "name": "string.quoted.single.silverstripe string.silverstripe",
+                    "begin": "'",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.begin.html.silverstripe"
+                        }
+                    },
+                    "end": "'",
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.html.silverstripe"
+                        }
+                    }
+                }
+            ]
+        },
+        "accessChain": {
+            "patterns": [
+                {
+                    "name": "entity.name.function.silverstripe",
+                    "match": "(\\.[a-zA-Z_][\\w]*)(?=\\()"
+                },
+                {
+                    "name": "entity.name.function.silverstripe",
+                    "match": "\\.[a-zA-Z_][\\w]*"
+                },
+                {
+                    "name": "entity.name.function.silverstripe",
+                    "begin": "\\(",
+                    "end": "\\)",
                     "patterns": [
-                        { "include": "#variablePatterns" },
-                        { "include": "#doubleString" },
-                        { "include": "#singleString" },
-                        { "match": "\\d+", "name": "constant.numeric.silverstripe" },
-                        { "match": ",", "name": "punctuation.separator.argument.silverstripe" },
-                        { "match": "\\s+", "name": "meta.whitespace.silverstripe" }
+                        {
+                            "include": "#variablePatterns"
+                        },
+                        {
+                            "include": "#string"
+                        },
+                        {
+                            "include": "#commonExpressions"
+                        }
                     ]
                 }
             ]
         },
-        "attributeCall": {
-            "name": "entity.other.attribute-name.html.silverstripe",
-            "match": "(\\.[a-zA-Z_][\\w]*)(?=\\()",
-            "captures": {
-                "1": { "name": "entity.other.attribute-name.html.silverstripe" }
-            }
-        },
-        "attribute": {
-            "name": "entity.other.attribute-name.html.silverstripe",
-            "match": "\\.[a-zA-Z_][\\w]*"
+        "commonExpressions": {
+            "patterns": [
+                {
+                    "match": "\\b\\d+\\b",
+                    "name": "constant.numeric.silverstripe"
+                },
+                {
+                    "match": "\\bnot\\b|!",
+                    "name": "keyword.operator.silverstripe"
+                },
+                {
+                    "match": "==|=|!=|<=|>=|<|>|&&|\\|\\|",
+                    "name": "keyword.operator.silverstripe"
+                }
+            ]
         },
         "bracedVariable": {
-            "name": "constant.numeric.silverstripe variable.silverstripe",
+            "name": "entity.name.silverstripe variable.silverstripe.braced",
             "begin": "(\\{)(\\$)",
             "beginCaptures": {
-                "1": { "name": "constant.numeric.silverstripe variable.silverstripe.begin" },
-                "2": { "name": "constant.numeric.silverstripe variable.silverstripe" }
+                "1": {
+                    "name": "entity.name.silverstripe variable.silverstripe"
+                },
+                "2": {
+                    "name": "entity.name.silverstripe variable.silverstripe"
+                }
             },
             "end": "(\\})",
             "endCaptures": {
-                "1": { "name": "constant.numeric.silverstripe variable.silverstripe.end" }
+                "1": {
+                    "name": "entity.name.silverstripe variable.silverstripe"
+                }
             },
             "patterns": [
-                { "include": "#doubleString" },
-                { "include": "#singleString" },
-                { "include": "#attributeCall" },
-                { "include": "#functionArguments" },
-                { "include": "#attribute" }
-            ],
-            "contentName": "meta.silverstripe"
+                {
+                    "include": "#string"
+                },
+                {
+                    "include": "#accessChain"
+                }
+            ]
         },
         "complexVariable": {
-            "name": "constant.numeric.silverstripe variable.silverstripe.complex",
+            "name": "entity.name.silverstripe variable.silverstripe.complex",
             "begin": "(\\$[a-zA-Z_][\\w]*)",
             "beginCaptures": {
-                "1": { "name": "constant.numeric.silverstripe variable.silverstripe" }
+                "1": {
+                    "name": "entity.name.silverstripe variable.silverstripe"
+                }
             },
             "end": "(?=\\s|$|[^\\w\\.$\\(\\)']|\\))",
             "patterns": [
-                { "include": "#attributeCall" },
-                { "include": "#functionArguments" },
-                { "include": "#attribute" }
-            ],
-            "contentName": "meta.silverstripe"
+                {
+                    "include": "#accessChain"
+                }
+            ]
         },
         "simpleVariable": {
-            "name": "constant.numeric.silverstripe variable.silverstripe.simple",
-            "match": "\\$[a-zA-Z_][\\w]*",
-            "captures": {
-                "0": { "name": "constant.numeric.silverstripe variable.silverstripe" }
-            }
+            "name": "entity.name.silverstripe variable.silverstripe.simple",
+            "match": "\\$[a-zA-Z_][\\w]*"
         },
         "variablePatterns": {
             "patterns": [
-                { "include": "#bracedVariable" },
-                { "include": "#complexVariable" },
-                { "include": "#simpleVariable" }
+                {
+                    "include": "#bracedVariable"
+                },
+                {
+                    "include": "#complexVariable"
+                },
+                {
+                    "include": "#simpleVariable"
+                }
             ]
         },
         "ifControl": {
             "name": "meta.control.if.silverstripe",
             "begin": "\\bif\\b",
             "beginCaptures": {
-                "0": { "name": "support.function.silverstripe" }
+                "0": {
+                    "name": "keyword.silverstripe"
+                }
             },
             "end": "(?=%>)",
             "patterns": [
-                { "name": "punctuation.separator.key-value.html.silverstripe", "match": "\\bnot\\b|!" },
-                { "name": "punctuation.separator.key-value.html.silverstripe", "match": "==|=|!=|<=|>=|<|>|&&|\\|\\|" },
-                { "name": "constant.numeric.silverstripe", "match": "\\b\\d+\\b" },
-                { "include": "#singleString" },
-                { "include": "#doubleString" }
+                {
+                    "include": "#commonExpressions"
+                },
+                {
+                    "include": "#string"
+                }
+            ]
+        },
+        "includeControl": {
+            "name": "meta.control.include.silverstripe",
+            "begin": "\\binclude\\b",
+            "beginCaptures": {
+                "0": {
+                    "name": "keyword.silverstripe"
+                }
+            },
+            "end": "(?=%>)",
+            "patterns": [
+                {
+                    "match": "[A-Za-z_][A-Za-z0-9_\\\\]*",
+                    "name": "entity.name.type.silverstripe"
+                },
+                {
+                    "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b(?=\\s*=)",
+                    "name": "entity.name.silverstripe"
+                },
+                {
+                    "match": "=",
+                    "name": "keyword.operator.silverstripe"
+                },
+                {
+                    "match": ",",
+                    "name": "punctuation.separator.argument.silverstripe"
+                },
+                {
+                    "include": "#string"
+                },
+                {
+                    "include": "#commonExpressions"
+                }
             ]
         }
     }

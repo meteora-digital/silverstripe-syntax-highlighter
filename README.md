@@ -68,18 +68,49 @@ Open any `.ss` file in VS Code and watch the magic happen! Syntax highlighting k
 Want to tweak the look? Let's make it yours!
 
 1. Inspect the TextMate scopes: Press `Cmd/Ctrl + Shift + P` to open the Command Palette, then search for "Developer: Inspect Editor Tokens and Scopes".
-2. Add customizations to your `settings.json`. For instance, to style Silverstripe functions in italic blue:
+2. Add customizations to your `settings.json`. Below are some examples to get you started:
 
 ```jsonc
 "editor.tokenColorCustomizations": {
     "textMateRules": [
         {
-            "scope": "support.function.silverstripe",
+            "scope": "punctuation.definition.silverstripe",
             "settings": {
-                "foreground": "#267beb",
+                "foreground": "#30afae",
+            }
+        },
+        {
+            "scope": "keyword.silverstripe",
+            "settings": {
+                "foreground": "#559ad1",
+            }
+        },
+        {
+            "scope": "entity.name.type.silverstripe",
+            "settings": {
+                "foreground": "#C695C6",
                 "fontStyle": "italic"
             }
-        }
+        },
+        {
+            "scope": "entity.name.silverstripe variable.silverstripe",
+            "settings": {
+                "foreground": "#f6ac81"
+            }
+        },
+        {
+            "scope": "entity.name.function.silverstripe",
+            "settings": {
+                "foreground": "#dcc665",
+            }
+        },
+        {
+            "scope": "comment.block.silverstripe",
+            "settings": {
+                "foreground": "#9E9E9E",
+                "fontStyle": "italic"
+            }
+        },
     ]
 }
 ```
