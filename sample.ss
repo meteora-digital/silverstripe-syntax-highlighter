@@ -26,7 +26,7 @@
                     <h2>$Title</h2>
                     <p>$Content.Summary(100)</p>
                     <% if $Image %>
-                        <img src="{$Image.Fill(200,200).Convert('webp').URL}" alt="{$Image.Title.ATT}">
+                        <img src="{$Image.Fill(200,200).Convert('webp').URL}" alt="<% if $AlternativeText %>{$AlternativeText}<% else %>{$Image.Title.ATT}<% end_if %>">
                     <% end_if %>
                 </article>
             <% end_loop %>
