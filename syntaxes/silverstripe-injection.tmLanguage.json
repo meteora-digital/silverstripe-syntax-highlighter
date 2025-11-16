@@ -11,22 +11,22 @@
             "include": "#variablePatterns"
         },
         {
-            "name": "keyword.silverstripe",
+            "name": "keyword.silverstripe meta.silverstripe",
             "begin": "<%(?!-)",
             "beginCaptures": {
                 "0": {
-                    "name": "punctuation.definition.silverstripe"
+                    "name": "punctuation.definition.silverstripe meta.silverstripe"
                 }
             },
             "end": "(?<!-)%>",
             "endCaptures": {
                 "0": {
-                    "name": "punctuation.definition.silverstripe"
+                    "name": "punctuation.definition.silverstripe meta.silverstripe"
                 }
             },
             "patterns": [
                 {
-                    "name": "punctuation.separator.silverstripe",
+                    "name": "punctuation.separator.silverstripe meta.silverstripe",
                     "match": ","
                 },
                 {
@@ -43,56 +43,56 @@
     ],
     "repository": {
         "commentBlock": {
-            "name": "comment.block.silverstripe",
+            "name": "comment.block.silverstripe meta.silverstripe",
             "begin": "<%--",
             "beginCaptures": {
                 "0": {
-                    "name": "punctuation.definition.comment.begin.silverstripe"
+                    "name": "punctuation.definition.comment.begin.silverstripe meta.silverstripe"
                 }
             },
             "end": "--%>",
             "endCaptures": {
                 "0": {
-                    "name": "punctuation.definition.comment.end.silverstripe"
+                    "name": "punctuation.definition.comment.end.silverstripe meta.silverstripe"
                 }
             },
-            "contentName": "comment.block.silverstripe",
+            "contentName": "comment.block.silverstripe meta.silverstripe",
             "patterns": [
                 {
                     "match": "(?:(?!--%>).)+",
-                    "name": "comment.block.silverstripe"
+                    "name": "comment.block.silverstripe meta.silverstripe"
                 }
             ]
         },
         "string": {
             "patterns": [
                 {
-                    "name": "string.quoted.double.silverstripe string.silverstripe",
+                    "name": "string.quoted.double.silverstripe string.silverstripe meta.silverstripe",
                     "begin": "\"",
                     "beginCaptures": {
                         "0": {
-                            "name": "punctuation.definition.string.begin.html.silverstripe"
+                            "name": "punctuation.definition.string.begin.html.silverstripe meta.silverstripe"
                         }
                     },
                     "end": "\"",
                     "endCaptures": {
                         "0": {
-                            "name": "punctuation.definition.string.end.html.silverstripe"
+                            "name": "punctuation.definition.string.end.html.silverstripe meta.silverstripe"
                         }
                     }
                 },
                 {
-                    "name": "string.quoted.single.silverstripe string.silverstripe",
+                    "name": "string.quoted.single.silverstripe string.silverstripe meta.silverstripe",
                     "begin": "'",
                     "beginCaptures": {
                         "0": {
-                            "name": "punctuation.definition.string.begin.html.silverstripe"
+                            "name": "punctuation.definition.string.begin.html.silverstripe meta.silverstripe"
                         }
                     },
                     "end": "'",
                     "endCaptures": {
                         "0": {
-                            "name": "punctuation.definition.string.end.html.silverstripe"
+                            "name": "punctuation.definition.string.end.html.silverstripe meta.silverstripe"
                         }
                     }
                 }
@@ -101,15 +101,15 @@
         "accessChain": {
             "patterns": [
                 {
-                    "name": "entity.name.function.silverstripe",
+                    "name": "entity.name.function.silverstripe meta.silverstripe",
                     "match": "(\\.[a-zA-Z_][\\w]*)(?=\\()"
                 },
                 {
-                    "name": "entity.name.function.silverstripe",
+                    "name": "entity.name.function.silverstripe meta.silverstripe",
                     "match": "\\.[a-zA-Z_][\\w]*"
                 },
                 {
-                    "name": "entity.name.function.silverstripe",
+                    "name": "entity.name.function.silverstripe meta.silverstripe",
                     "begin": "\\(",
                     "end": "\\)",
                     "patterns": [
@@ -121,7 +121,7 @@
                         },
                         {
                             "match": ",",
-                            "name": "punctuation.separator.argument.silverstripe"
+                            "name": "punctuation.separator.argument.silverstripe meta.silverstripe"
                         },
                         {
                             "include": "#commonExpressions"
@@ -134,15 +134,15 @@
             "patterns": [
                 {
                     "match": "\\b\\d+\\b",
-                    "name": "constant.numeric.silverstripe"
+                    "name": "constant.numeric.silverstripe meta.silverstripe"
                 },
                 {
                     "match": "\\bnot\\b|!",
-                    "name": "keyword.operator.logical.not.silverstripe"
+                    "name": "keyword.operator.logical.not.silverstripe meta.silverstripe"
                 },
                 {
                     "match": "==|=|!=|<=|>=|<|>|&&|\\|\\|",
-                    "name": "keyword.operator.logical.silverstripe"
+                    "name": "keyword.operator.logical.silverstripe meta.silverstripe"
                 }
             ]
         },
@@ -154,7 +154,7 @@
                     "name": "entity.name.silverstripe variable.silverstripe.brace"
                 },
                 "2": {
-                    "name": "entity.name.silverstripe variable.silverstripe"
+                    "name": "entity.name.silverstripe variable.silverstripe meta.silverstripe"
                 }
             },
             "end": "(\\})",
@@ -177,7 +177,7 @@
             "begin": "(\\$[a-zA-Z_][\\w]*)",
             "beginCaptures": {
                 "1": {
-                    "name": "entity.name.silverstripe variable.silverstripe"
+                    "name": "entity.name.silverstripe variable.silverstripe meta.silverstripe"
                 }
             },
             "end": "(?=\\s|$|[^\\w\\.$\\(\\)']|\\))",
@@ -205,11 +205,11 @@
             ]
         },
         "ifControl": {
-            "name": "meta.control.if.silverstripe",
+            "name": "meta.control.if.silverstripe meta.silverstripe",
             "begin": "\\bif\\b",
             "beginCaptures": {
                 "0": {
-                    "name": "keyword.silverstripe"
+                    "name": "keyword.silverstripe meta.silverstripe"
                 }
             },
             "end": "(?=%>)",
@@ -223,30 +223,30 @@
             ]
         },
         "includeControl": {
-            "name": "meta.control.include.silverstripe",
+            "name": "meta.control.include.silverstripe meta.silverstripe",
             "begin": "\\binclude\\b",
             "beginCaptures": {
                 "0": {
-                    "name": "keyword.silverstripe"
+                    "name": "keyword.silverstripe meta.silverstripe"
                 }
             },
             "end": "(?=%>)",
             "patterns": [
                 {
                     "match": "[A-Za-z_][A-Za-z0-9_\\\\]*",
-                    "name": "entity.name.type.silverstripe"
+                    "name": "entity.name.type.silverstripe meta.silverstripe"
                 },
                 {
                     "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b(?=\\s*=)",
-                    "name": "entity.name.silverstripe"
+                    "name": "entity.name.silverstripe meta.silverstripe"
                 },
                 {
                     "match": "=",
-                    "name": "keyword.operator.silverstripe"
+                    "name": "keyword.operator.silverstripe meta.silverstripe"
                 },
                 {
                     "match": ",",
-                    "name": "punctuation.separator.argument.silverstripe"
+                    "name": "punctuation.separator.argument.silverstripe meta.silverstripe"
                 },
                 {
                     "include": "#string"

@@ -105,7 +105,7 @@ Want to tweak the look? Let's make it yours!
             }
         },
         {
-            "scope": "comment.block.silverstripe",
+            "scope": "comment.block.silverstripe meta.silverstripe",
             "settings": {
                 "foreground": "#9E9E9E",
                 "fontStyle": "italic"
