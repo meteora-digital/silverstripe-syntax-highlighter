@@ -2,14 +2,14 @@
     "Loop Block": {
         "prefix": "loop",
         "body": [
-            "<% loop $${1:Collection} %>${2}<% end_loop %>"
+            "<% loop $${1:Collection} %>${0}<% end_loop %>"
         ],
         "description": "Silverstripe loop block"
     },
     "If Block": {
         "prefix": "if",
         "body": [
-            "<% if $${1:Condition} %>${2}<% end_if %>"
+            "<% if $${1:Condition} %>${0}<% end_if %>"
         ],
         "description": "Silverstripe if block"
     },
@@ -23,56 +23,56 @@
     "Else If Block": {
         "prefix": "elseif",
         "body": [
-            "<% else_if $${1:Condition} %>${2}"
+            "<% else_if $${1:Condition} %>${0}"
         ],
         "description": "Silverstripe else if block"
     },
     "Include": {
         "prefix": "include",
         "body": [
-            "<% include ${1:TemplateName} %>${2}"
+            "<% include ${1:TemplateName} %>"
         ],
         "description": "Silverstripe include statement"
     },
     "Themed CSS": {
         "prefix": "themedcss",
         "body": [
-            "<% require themedCSS('${1:myfile.css}') %>${2}"
+            "<% require themedCSS('${1:myfile.css}') %>"
         ],
         "description": "Silverstripe require themed CSS"
     },
     "Require CSS": {
         "prefix": "requirecss",
         "body": [
-            "<% require css('${1:myfile.css}') %>${2}"
+            "<% require css('${1:myfile.css}') %>"
         ],
         "description": "Silverstripe require CSS"
     },
     "Require JS": {
         "prefix": "requirejs",
         "body": [
-            "<% require javascript('${1:myfile.js}') %>${2}"
+            "<% require javascript('${1:myfile.js}') %>"
         ],
         "description": "Silverstripe require JS"
     },
     "Cached Block": {
         "prefix": "cached",
         "body": [
-            "<% cached '${1:key}', $${2:Dependency} %>${3}<% end_cached %>"
+            "<% cached '${1:key}', $${2:Dependency} %>${0}<% end_cached %>"
         ],
         "description": "Silverstripe cached block"
     },
     "With Block": {
         "prefix": "with",
         "body": [
-            "<% with $${1:Object} %>${2}<% end_with %>"
+            "<% with $${1:Object} %>${0}<% end_with %>"
         ],
         "description": "Silverstripe with block"
     },
     "Comment Block": {
         "prefix": "sscomment",
         "body": [
-            "<%-- ${1:Comment} --%>${2}"
+            "<%-- ${0} --%>"
         ],
         "description": "Silverstripe comment block"
     }
