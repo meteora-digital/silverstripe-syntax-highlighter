@@ -173,7 +173,7 @@
             ]
         },
         "complexVariable": {
-            "name": "entity.name.silverstripe variable.silverstripe.complex",
+            "name": "entity.name.silverstripe variable.silverstripe.complex meta.silverstripe",
             "begin": "(\\$[a-zA-Z_][\\w]*)",
             "beginCaptures": {
                 "1": {
@@ -188,8 +188,23 @@
             ]
         },
         "simpleVariable": {
-            "name": "entity.name.silverstripe variable.silverstripe.simple",
+            "name": "entity.name.silverstripe variable.silverstripe.simple meta.silverstripe",
             "match": "\\$[a-zA-Z_][\\w]*"
+        },
+        "templateLiteralVariable": {
+            "name": "keyword.silverstripe keyword.silverstripe.templateLiteral meta.silverstripe",
+            "begin": "(\\$\\{)",
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.definition.silverstripe punctuation.definition.silverstripe.templateLiteral.brace meta.silverstripe"
+                }
+            },
+            "end": "(\\})",
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.silverstripe punctuation.definition.silverstripe.templateLiteral.brace meta.silverstripe"
+                }
+            }
         },
         "variablePatterns": {
             "patterns": [
@@ -201,6 +216,9 @@
                 },
                 {
                     "include": "#simpleVariable"
+                },
+                {
+                    "include": "#templateLiteralVariable"
                 }
             ]
         },
