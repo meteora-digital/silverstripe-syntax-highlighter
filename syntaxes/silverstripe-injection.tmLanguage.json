@@ -224,7 +224,7 @@
         },
         "ifControl": {
             "name": "meta.control.if.silverstripe meta.silverstripe",
-            "begin": "\\bif\\b",
+            "begin": "\\b(if|else_if)\\b",
             "beginCaptures": {
                 "0": {
                     "name": "keyword.silverstripe meta.silverstripe"
