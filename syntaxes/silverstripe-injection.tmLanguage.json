@@ -137,6 +137,10 @@
                     "name": "constant.numeric.silverstripe meta.silverstripe"
                 },
                 {
+                    "match": "\\b(true|false)\\b",
+                    "name": "constant.language.boolean.silverstripe meta.silverstripe"
+                },
+                {
                     "match": "\\bnot\\b|!",
                     "name": "keyword.operator.logical.not.silverstripe meta.silverstripe"
                 },
@@ -251,6 +255,9 @@
             "end": "(?=%>)",
             "patterns": [
                 {
+                    "include": "#commonExpressions"
+                },
+                {
                     "match": "[A-Za-z_][A-Za-z0-9_\\\\]*",
                     "name": "entity.name.type.silverstripe meta.silverstripe"
                 },
@@ -268,9 +275,6 @@
                 },
                 {
                     "include": "#string"
-                },
-                {
-                    "include": "#commonExpressions"
                 }
             ]
         }
